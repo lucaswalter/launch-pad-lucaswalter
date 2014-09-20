@@ -22,6 +22,7 @@ namespace LaunchPadLucasWalter.ViewModels
         public ConsoleViewModel()
         {
             InitializeComponent();
+            this.DataContext = new ConsoleViewModel();
         }
     }
 }
