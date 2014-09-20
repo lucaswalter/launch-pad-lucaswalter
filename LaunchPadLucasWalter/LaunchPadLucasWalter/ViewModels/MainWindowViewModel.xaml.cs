@@ -22,6 +22,7 @@ namespace LaunchPadLucasWalter.ViewModels
         public MainWindowViewModel()
         {
             InitializeComponent();
+            this.DataContext = new MainWindowViewModel();
         }
     }
 }
