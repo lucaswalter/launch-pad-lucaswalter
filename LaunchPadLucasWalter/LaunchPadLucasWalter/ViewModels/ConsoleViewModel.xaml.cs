@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using Caliburn.Micro;
 using LaunchPadLucasWalter.Models;
 
 namespace LaunchPadLucasWalter.ViewModels
@@ -19,7 +20,7 @@ namespace LaunchPadLucasWalter.ViewModels
     /// <summary>
     /// Interaction logic for ConsoleViewModel.xaml
     /// </summary>
-    public partial class ConsoleViewModel : Window
+    public partial class ConsoleViewModel : PropertyChangedBase
     {
         private ConsoleModel Model;
 
