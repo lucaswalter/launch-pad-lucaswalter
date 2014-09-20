@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using LaunchPadLucasWalter.Models;
+
 namespace LaunchPadLucasWalter.ViewModels
 {
     /// <summary>
@@ -19,10 +21,13 @@ namespace LaunchPadLucasWalter.ViewModels
     /// </summary>
     public partial class MainWindowViewModel : Window
     {
+        private MainWindowModel Model;
+
         public MainWindowViewModel()
         {
             InitializeComponent();
             this.DataContext = new MainWindowViewModel();
+            Model = new MainWindowModel();
         }
     }
 }

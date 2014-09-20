@@ -67,8 +67,12 @@
     </ApplicationDefinition>
     <Compile Include="Models\ConsoleModel.cs" />
     <Compile Include="Models\MainWindowModel.cs" />
-    <Compile Include="ViewModels\ConsoleViewModel.cs" />
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\ConsoleViewModel.xaml.cs">
+      <DependentUpon>ConsoleViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainWindowViewModel.xaml.cs">
+      <DependentUpon>MainWindowViewModel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConsoleView.xaml.cs">
       <DependentUpon>ConsoleView.xaml</DependentUpon>
     </Compile>
@@ -84,6 +88,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ViewModels\ConsoleViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewModels\MainWindowViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ConsoleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
