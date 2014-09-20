@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LaunchPadLucasWalter.Models
 {
-    class ConsoleModel
+    public class ConsoleModel
     {
     }
 }
