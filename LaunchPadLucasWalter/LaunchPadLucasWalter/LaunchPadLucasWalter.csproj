@@ -72,9 +72,6 @@
     <Compile Include="Views\ConsoleView.xaml.cs">
       <DependentUpon>ConsoleView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -90,10 +87,6 @@
     <Page Include="Views\ConsoleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
