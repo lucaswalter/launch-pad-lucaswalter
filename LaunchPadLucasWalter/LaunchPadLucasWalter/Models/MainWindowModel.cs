@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LaunchPadLucasWalter.Models
 {
-    public class MainWindowModel
+    class MainWindowModel
     {
     }
 }
