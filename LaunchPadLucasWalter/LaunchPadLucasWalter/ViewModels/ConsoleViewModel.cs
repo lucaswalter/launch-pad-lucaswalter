@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaunchPadLucasWalter.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace LaunchPadLucasWalter.ViewModels
 {
-    class ConsoleViewModel
+    public class ConsoleViewModel
     {
+        private ConsoleModel Model;
+
+        public ConsoleViewModel()
+        {
+            Model = new ConsoleModel();
+        }
     }
 }
