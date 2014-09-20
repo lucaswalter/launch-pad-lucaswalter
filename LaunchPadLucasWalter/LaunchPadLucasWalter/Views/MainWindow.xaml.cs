@@ -10,25 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LaunchPadLucasWalter.ViewModels;
 
-using Caliburn.Micro;
-using LaunchPadLucasWalter.Models;
-
-namespace LaunchPadLucasWalter.ViewModels
+namespace LaunchPadLucasWalter.Views
 {
     /// <summary>
-    /// Interaction logic for ConsoleViewModel.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class ConsoleViewModel : PropertyChangedBase
+    public partial class MainWindow : UserControl
     {
-        private ConsoleModel Model;
-
-        public ConsoleViewModel()
+        public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new ConsoleViewModel();
-            Model = new ConsoleModel();
+            this.DataContext = new MainWindowViewModel();
         }
     }
 }

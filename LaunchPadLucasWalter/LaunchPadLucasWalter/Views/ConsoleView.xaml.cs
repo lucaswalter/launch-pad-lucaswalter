@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaunchPadLucasWalter.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace LaunchPadLucasWalter.Views
         public ConsoleView()
         {
             InitializeComponent();
+            this.DataContext = new ConsoleViewModel();
         }
     }
 }
