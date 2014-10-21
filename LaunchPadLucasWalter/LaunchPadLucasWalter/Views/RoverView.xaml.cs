@@ -1,5 +1,5 @@
-﻿using System.Windows.Controls;
-using LaunchPadLucasWalter.ViewModels;
+﻿using LaunchPadLucasWalter.ViewModels;
+using System.Windows.Controls;
 
 namespace LaunchPadLucasWalter.Views
 {

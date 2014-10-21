@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Caliburn.Micro;
+using LaunchPadLucasWalter.Models;
 
 namespace LaunchPadLucasWalter.ViewModels
 {
-    class RoverViewModel
+    class RoverViewModel : PropertyChangedBase
     {
+        private RoverModel Model;
+
+        public RoverViewModel()
+        {
+            Model = new RoverModel();
+        }
     }
 }
