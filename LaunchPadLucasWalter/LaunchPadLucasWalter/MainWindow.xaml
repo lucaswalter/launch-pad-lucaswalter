@@ -1,8 +1,17 @@
 ﻿<Window x:Class="LaunchPadLucasWalter.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ViewModels="clr-namespace:LaunchPadLucasWalter.ViewModels"
+        xmlns:Views="clr-namespace:LaunchPadLucasWalter.Views"
         Title="MainWindow" Height="350" Width="525">
+    
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type ViewModels:ConsoleViewModel}">
+            <Views:ConsoleView/>
+        </DataTemplate>
+    </Window.Resources>
+
     <Grid>
-        
+        <ContentControl Name="Console"/>
     </Grid>
 </Window>
