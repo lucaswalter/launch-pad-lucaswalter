@@ -5,5 +5,6 @@ namespace LaunchPadLucasWalter.Models
     public class MainWindowModel
     {
         internal ConsoleViewModel console;
+        internal RoverViewModel rover;
     }
 }

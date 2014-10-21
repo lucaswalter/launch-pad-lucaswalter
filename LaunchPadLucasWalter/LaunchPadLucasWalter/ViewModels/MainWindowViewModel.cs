@@ -21,6 +21,20 @@ namespace LaunchPadLucasWalter.ViewModels
             }
         }
 
+        public RoverViewModel Rover
+        {
+            get
+            {
+                return Model.rover;
+            }
+
+            set
+            {
+                Model.rover = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
         public MainWindowViewModel()
         {
             Model = new MainWindowModel();
