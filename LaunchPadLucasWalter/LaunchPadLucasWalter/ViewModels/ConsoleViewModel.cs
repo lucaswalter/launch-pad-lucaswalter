@@ -3,11 +3,11 @@ using LaunchPadLucasWalter.Models;
 
 namespace LaunchPadLucasWalter.ViewModels
 {
-    public class ConsoleViewModel : PropertyChangedBase
+    class ConsoleViewModel : PropertyChangedBase
     {
-        private ConsoleModel Model;
         private MainWindowViewModel MainWindow;
-
+        private ConsoleModel Model;
+        
         public string Text
         {
             get
@@ -23,10 +23,11 @@ namespace LaunchPadLucasWalter.ViewModels
             }
         }
 
-        public ConsoleViewModel()
+        public ConsoleViewModel(MainWindowViewModel mainWindow)
         {
             Model = new ConsoleModel();
-            UpdateConsole("Welconme!");
+            MainWindow = mainWindow;
+            UpdateConsole("Welcome!");
         }
 
         public void Clear()

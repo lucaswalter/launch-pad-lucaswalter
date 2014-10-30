@@ -6,9 +6,9 @@ namespace LaunchPadLucasWalter.ViewModels
 {
     class RoverViewModel : PropertyChangedBase
     {
-        private RoverModel Model;
         private MainWindowViewModel MainWindow;
-
+        private RoverModel Model;
+        
         public string RoverName
         {
             get
@@ -69,9 +69,10 @@ namespace LaunchPadLucasWalter.ViewModels
             }
         }
 
-        public RoverViewModel()
+        public RoverViewModel(MainWindowViewModel mainWindow)
         {
             Model = new RoverModel();
+            MainWindow = mainWindow;
             RoverName = "Schlot Bot";
         }
 
