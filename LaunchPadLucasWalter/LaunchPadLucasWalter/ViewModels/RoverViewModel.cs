@@ -1,12 +1,14 @@
 ﻿using Caliburn.Micro;
 using LaunchPadLucasWalter.Models;
+using System.Threading.Tasks;
 
 namespace LaunchPadLucasWalter.ViewModels
 {
     class RoverViewModel : PropertyChangedBase
     {
+        private MainWindowViewModel MainWindow;
         private RoverModel Model;
-
+        
         public string RoverName
         {
             get
@@ -67,14 +69,45 @@ namespace LaunchPadLucasWalter.ViewModels
             }
         }
 
-        public RoverViewModel()
+        public RoverViewModel(MainWindowViewModel mainWindow)
         {
             Model = new RoverModel();
+            MainWindow = mainWindow;
+            RoverName = "Schlot Bot";
         }
 
         public void Rove()
         {
-            // TODO
+            if (IsConnected)
+            {
+                Task.Run(async () =>
+                {
+                    MainWindow.Console.UpdateConsole("Roving Initiated");
+
+                    Speed = 0;
+                    Temperature = 50;
+
+                    for (var i = 0; i < 15; i++)
+                    {
+                        Speed = i;
+                        Temperature += Speed / 4;
+                        await Task.Delay(200);
+                    }
+
+                    for (var i = 14; i >= 0; i--)
+                    {
+                        Speed = i;
+                        Temperature -= Speed / 4;
+                        await Task.Delay(200);
+                    }
+
+                    MainWindow.Console.UpdateConsole("Roving Halted");
+                });   
+            }
+            else
+            {
+                MainWindow.Console.UpdateConsole("Rover Is Not Connected");
+            }
         }
     }
 }

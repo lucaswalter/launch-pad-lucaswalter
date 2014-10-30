@@ -11,7 +11,6 @@ namespace LaunchPadLucasWalter.Views
         public ConsoleView()
         {
             InitializeComponent();
-            this.DataContext = new ConsoleViewModel();
         }
     }
 }
