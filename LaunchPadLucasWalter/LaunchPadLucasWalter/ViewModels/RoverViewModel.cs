@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using LaunchPadLucasWalter.Models;
+using System.Threading.Tasks;
 
 namespace LaunchPadLucasWalter.ViewModels
 {
@@ -75,7 +76,28 @@ namespace LaunchPadLucasWalter.ViewModels
 
         public void Rove()
         {
-            // TODO
+            if (IsConnected)
+            {
+                Task.Run(async () =>
+                {
+                    for (var i = 0; i < 15; i++)
+                    {
+                        Speed += 1;
+                        Temperature = 50 + Speed / 4;
+                        await Task.Delay(200);
+                    }
+                    for (var i = 14; i >= 0; i--)
+                    {
+                        Speed -= 1;
+                        Temperature = 50 + Speed / 4;
+                        await Task.Delay(200);
+                    }
+                });
+            }
+            else
+            {
+                // TODO
+            }
         }
     }
 }
