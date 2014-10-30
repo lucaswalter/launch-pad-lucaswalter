@@ -39,6 +39,7 @@ namespace LaunchPadLucasWalter.ViewModels
         {
             Model = new MainWindowModel();
             Model.console = new ConsoleViewModel();
+            Model.rover = new RoverViewModel();
         }
     }
 }
