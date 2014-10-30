@@ -6,21 +6,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="80*" />
-            <RowDefinition Height="80*" />
-            <RowDefinition Height="80*" />
-
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120*" />
-            <ColumnDefinition Width="225*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
-        <TextBox x:Name="Text" Grid.Column="1" Grid.Row="0" Width="Auto" Height="Auto" Background="Black" Foreground="WhiteSmoke" 
-                 Grid.RowSpan="4" Margin="1" VerticalScrollBarVisibility="Auto"/>
-        <Button x:Name="Clear" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" Content="Clear" Margin="1"/>
-        <Button x:Name="Connect" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" Content="Connect" Margin="1"/>
-        <Button x:Name="Disconnect"  Grid.Column="0" Grid.Row="2" Width="Auto" Height="Auto" Content="Disconnect" Margin="1"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Text" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="TextBlock" Background="Black" Foreground="White" FontFamily="Lucida Console" />
+        <Button x:Name="Clear" Content="Clear" Grid.Column="0" Grid.Row="1"/>
+        <Button x:Name="Connect" Content="Connect" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="Disconnect" Content="Disconnect" Grid.Column="2" Grid.Row="1"/>
     </Grid>
 </UserControl>
