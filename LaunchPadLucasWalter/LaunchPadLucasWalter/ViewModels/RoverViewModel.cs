@@ -82,23 +82,31 @@ namespace LaunchPadLucasWalter.ViewModels
             {
                 Task.Run(async () =>
                 {
+                    MainWindow.Console.UpdateConsole("Roving Initiated");
+
+                    Speed = 0;
+                    Temperature = 50;
+
                     for (var i = 0; i < 15; i++)
                     {
-                        Speed += 1;
-                        Temperature = 50 + Speed / 4;
+                        Speed = i;
+                        Temperature += Speed / 4;
                         await Task.Delay(200);
                     }
+
                     for (var i = 14; i >= 0; i--)
                     {
-                        Speed -= 1;
-                        Temperature = 50 + Speed / 4;
+                        Speed = i;
+                        Temperature -= Speed / 4;
                         await Task.Delay(200);
                     }
-                });
+
+                    MainWindow.Console.UpdateConsole("Roving Halted");
+                });   
             }
             else
             {
-                // TODO
+                MainWindow.Console.UpdateConsole("Rover Is Not Connected");
             }
         }
     }
