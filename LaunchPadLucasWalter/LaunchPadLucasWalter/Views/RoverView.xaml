@@ -7,15 +7,20 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="225*"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
-        <TextBlock x:Name="roverStatus" Grid.Column="0" Grid.Row="0" Width="Auto" Height="Auto" FontSize="16"/>
-        <TextBlock x:Name="isConnectedStr" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" />
-        <Button x:Name="Rove" Grid.Column="0" Grid.Row="1" Width="Auto" Height="Auto" Content="Begin Roving"/>
+
+        <TextBlock x:Name="RoverName" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="RoverName" />
+        <TextBlock x:Name="Speed" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="Speed" />
+        <TextBlock x:Name="Temperature" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="Temperature" />
+        <TextBlock x:Name="IsConnected" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="IsConnected" />
+        <Button x:Name="Rove" Grid.Column="0" Grid.Row="4" Width="Auto" Height="Auto" Content="Begin Roving"/>
     </Grid>
 </UserControl>
