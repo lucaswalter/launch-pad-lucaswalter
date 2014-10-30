@@ -70,6 +70,7 @@ namespace LaunchPadLucasWalter.ViewModels
         public RoverViewModel()
         {
             Model = new RoverModel();
+            RoverName = "Schlot Bot";
         }
 
         public void Rove()
