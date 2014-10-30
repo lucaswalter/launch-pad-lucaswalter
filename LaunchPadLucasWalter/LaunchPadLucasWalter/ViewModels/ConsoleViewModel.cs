@@ -6,6 +6,7 @@ namespace LaunchPadLucasWalter.ViewModels
     public class ConsoleViewModel : PropertyChangedBase
     {
         private ConsoleModel Model;
+        private MainWindowViewModel MainWindow;
 
         public string Text
         {

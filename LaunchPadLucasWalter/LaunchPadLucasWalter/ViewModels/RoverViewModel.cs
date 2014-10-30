@@ -7,6 +7,7 @@ namespace LaunchPadLucasWalter.ViewModels
     class RoverViewModel : PropertyChangedBase
     {
         private RoverModel Model;
+        private MainWindowViewModel MainWindow;
 
         public string RoverName
         {
