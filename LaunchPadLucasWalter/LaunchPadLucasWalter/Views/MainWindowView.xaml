@@ -19,6 +19,7 @@
             <ColumnDefinition Width="300*" />
             <ColumnDefinition Width="300*" />
         </Grid.ColumnDefinitions>
+        
         <ContentControl x:Name="Console" Grid.Column="0" Width="Auto" Height="Auto" />
         <ContentControl x:Name="Rover" Grid.Column="1" Width="Auto" Height="Auto" />
     </Grid>
