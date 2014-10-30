@@ -25,7 +25,7 @@ namespace LaunchPadLucasWalter.ViewModels
         public ConsoleViewModel()
         {
             Model = new ConsoleModel();
-            Model.text = "Test Text";
+            UpdateConsole("Welconme!");
         }
 
         public void Clear()
