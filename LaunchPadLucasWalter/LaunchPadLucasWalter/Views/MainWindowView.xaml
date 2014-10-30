@@ -9,6 +9,9 @@
         <DataTemplate DataType="{x:Type ViewModels:ConsoleViewModel}">
             <Views:ConsoleView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type ViewModels:RoverViewModel}">
+            <Views:RoverView/>
+        </DataTemplate>
     </Window.Resources>
 
     <Grid>
