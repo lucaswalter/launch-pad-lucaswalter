@@ -37,11 +37,13 @@ namespace LaunchPadLucasWalter.ViewModels
 
         public void Connect()
         {
+            MainWindow.Rover.IsConnected = true;
             UpdateConsole("Connected!");
         }
 
         public void Disconnect()
         {
+            MainWindow.Rover.IsConnected = false;
             UpdateConsole("Disconnected!");
         }
 
