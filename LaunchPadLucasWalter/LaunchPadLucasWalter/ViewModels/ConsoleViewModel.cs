@@ -28,5 +28,25 @@ namespace LaunchPadLucasWalter.ViewModels
             Model.text = "Test Text";
         }
 
+        public void Clear()
+        {
+            Text = string.Empty;
+        }
+
+        public void Connect()
+        {
+            UpdateConsole("Connected!");
+        }
+
+        public void Disconnect()
+        {
+            UpdateConsole("Disconnected!");
+        }
+
+        public void UpdateConsole(string s)
+        {
+            Text += s;
+            Text += System.Environment.NewLine;
+        }
     }
 }
